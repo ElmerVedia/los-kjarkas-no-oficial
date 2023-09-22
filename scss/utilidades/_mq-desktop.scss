@@ -1,0 +1,296 @@
+//mq desktop
+
+@media screen and (min-width:1024px){
+    header{
+        .bg-transparencia{
+            background: $color-transparencia;
+        }
+    }
+    main{
+        .img-inicio{
+            img{
+                height: 100vh;
+            }
+        }
+        section{
+            .titulo{
+                h1{
+                    font-size: 40px;
+                    font-weight: 900;
+                }
+                p{
+                    font-size: 20px;
+                    margin: 0 25% 20px 25%;
+                }
+            }
+            .video{
+                iframe{
+                    height: 450px;
+                    width: 660px;
+                }
+            } 
+        }
+        .enlaces-interno{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 4rem 0;
+            .contenedor-imagen{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-content: center;
+                .imagen{
+                    margin: 0.5rem;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    box-shadow: 3px 3px 10px rgba(84, 82, 82, 0.7);
+                    transition: all 400ms ease;
+                    &:hover{
+                        box-shadow: 5px 5px 20px rgb(52, 51, 51);
+                        transform: translateY(-3);
+                    }
+                    figure{
+                        img{
+                            width: auto;
+                            height: 250px;
+                        }
+                    }
+                    .enlace{
+                        padding: 20px;
+                        text-align: center;
+                        a{
+                            font-weight: 400;
+                            text-decoration: none;
+                            padding: 10px;
+                            color: $color-white;
+                            border: 2px solid #252525;
+                            border-radius: 6px;
+                            transition: all 400ms ease;
+                            &:hover{
+                                font-weight: 600;
+                                background-color: #000000b4;
+                                color: $color-yellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .spotify-multimedia{
+            margin: 2rem 0;
+            h2{
+                font-size: 30px;
+                padding-bottom: 10px;
+                font-weight: 600;
+            }
+            .spotify{
+                justify-content: space-around;
+                .spotify-dos, .spotify-tres{
+                    display: flex;
+                    iframe{
+                        box-shadow: 3px 3px 10px rgba(84, 82, 82, 0.7);
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footer-inicio{
+            img{
+                height: auto;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/* mq desktop historia */
+@media screen and (min-width:1024px){
+    main{
+        .titulo-historia{
+            h1{
+                font-size: 40px;
+                font-weight: 900;
+            }
+        }
+        .contenedor-historia{
+            margin-right: 15%;
+            margin-left: 15%;
+            .historia-principal{
+                h2{
+                    font-size: 35px;
+                    font-weight: 800;
+                }
+                p{
+                    font-size: 20px;
+                }
+            }
+            .historia-secundario{
+                margin: 0 10px;
+                h3{
+                    font-size: 30px;
+                    font-weight: 500;
+                }
+                p{
+                    font-size: 20px;
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}
+footer{
+    .footer-paginas{
+        padding: 3rem 0;
+        p{
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+/* mq desktop integrantes */
+@media screen and (min-width:1024px){
+    main{
+        .titulo-integrantes{
+            h1{
+                font-size: 35px;
+                font-weight: 800;
+                text-shadow: 2px 2px 2px rgb(76, 75, 75);
+                color: $color-white;
+            }
+        }
+        .kjarkas-grupo{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            margin: 10px 15%;
+            .kjarkas-uno{
+                display: flex;
+                flex-direction: column;
+                margin-right: 20px;
+                h2{
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: $color-white;
+                }
+                p{
+                    font-size: 20px;
+                    color: $color-white;
+                }
+            }
+            .kjarkas-dos{
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+                h2{
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: $color-white;
+                }
+                p{
+                    font-size: 20px;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+/* mq desktop discografia */
+@media screen and (min-width:1024px){
+    main{
+        .titulo-discografia{
+            h1{
+                font-size: 35px;
+                font-weight: 800;
+            }
+        }
+        .contenedor-album{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .album{
+                .album-front{
+                    img{
+                        height: 400px;
+                        width: auto;
+                    }
+                    perspective: 1000px;
+                    &:hover .album-back{
+                        opacity: 1;
+                    }
+                    &:hover img{
+                        transform: rotateY(180deg);
+                        opacity: 0.2;
+                        filter: blur(40px);
+                        filter: grayscale(100%);
+                    }
+                    .album-back{
+                        border-radius: 0.5rem;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        color: $color-white;
+                        padding: 10px;
+                        width: 90%;
+                        h2{
+                            text-align: center;
+                            color: rgb(218, 3, 3);
+                            font-weight: 800;
+                            font-size: 25px;
+                        }
+                        ol{
+                            display: flex;
+                            flex-direction: column;
+                            margin: 1rem;
+                            border-top: solid 2px $color-yellow;
+                            color: rgb(3, 250, 3);
+                            padding-top: 1rem;
+                            letter-spacing: 1px;
+                            font-weight: 600;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}
+
+/* mq desktop contactos */
+@media screen and (min-width: 1024px){
+    .container{
+        .contacto{
+            min-width: 800px;
+            .formulario{
+                .cajas{
+                    overflow: hidden;
+                    .form{
+                        margin-bottom: 0px;
+                        width: 50%;
+                        &:nth-child(2n){
+                            justify-content: end;
+                        }
+                    }
+                }
+                .form-genero{
+                    display: flex;
+                    justify-content: center;
+                    label{
+                        margin-right: 4rem;
+                    }
+                    input{
+                        margin: 0 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
