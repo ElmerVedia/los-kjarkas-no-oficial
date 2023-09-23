@@ -43,6 +43,9 @@
                 .spotify-dos, .spotify-tres{
                     display: flex;
                     margin: 0.5rem;
+                    iframe{
+                        box-shadow: 3px 3px 10px rgba(84, 82, 82, 0.7);
+                    }
                 }
             }
         }
