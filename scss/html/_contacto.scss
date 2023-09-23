@@ -10,15 +10,13 @@
     max-width:  450px;
     .contacto{
         width: 100%;
-        background-color: #191718;
+        background-color: $color-transparencia;
         padding: 1.5rem;
         border-radius: 10px;
         box-shadow: inset -3px 3px 3px rgb(69, 67, 67);
         color: $color-white;
         h1{
-            font-size: 26px;
-            font-weight: 600;
-            text-align: center;
+            @include texto(center, 25px, 700, $color-white);
             padding-bottom: 6px;
             text-shadow: 2px 2px 2px rgb(69, 67, 67);
             border-bottom: solid 1px $color-white;
@@ -100,7 +98,7 @@
                     background: #b60404c7;
                     &:hover{
                         background-color: #069828cd;
-                        color: #d6d608;
+                        color: $color-yellow;
                     }
                 }
             }

@@ -5,8 +5,8 @@
 main{
     .kjarkas-grupo{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         gap: 1rem;
         margin: 2rem 1rem;
         div{
@@ -16,11 +16,5 @@ main{
                 object-fit: cover;
             }
         }
-    }
-    .kjarkas-uno{
-        display: none;
-    }
-    .kjarkas-dos{
-        display: none;
     }
 }

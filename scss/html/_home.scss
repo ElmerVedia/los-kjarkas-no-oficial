@@ -27,9 +27,7 @@ header{
                     li{
                         a{
                             padding: 12px 20px;
-                            font-size: 14px;
-                            color: $color-white;
-                            font-weight: bold;
+                            @include texto(left, 15px, 600, $color-white);
                             &:hover{
                                 background: $color-gray;
                                 border-radius: 10px;
@@ -48,7 +46,7 @@ main{
     .img-inicio{
         img{
             width: 100%;
-            height: 50vh;
+            height: auto;
         }
     }
     section{
@@ -57,16 +55,12 @@ main{
             justify-content: center;
             flex-direction: column;
             h1{
-                color: $color-yellow;
-                @extend %titulo-principal;
-                text-shadow: $color-titulo-aspecto;
+                @include texto(center, 30px, 900, $color-yellow);
+                @include aspecto-texto;
             }
             p{
-                text-align: center;
+                @include texto(center, 18px, 400, $color-white);
                 padding: 5px;
-                color: $color-white;
-                font-weight: 400;
-                font-size: 15px;
                 margin: 0 5px 30px 5px;
             }
         }
@@ -74,6 +68,7 @@ main{
             display: flex;
             padding: 0 1rem;
             justify-content: center;
+            margin: 1rem;
         }
     }
     .enlaces-interno{
@@ -81,15 +76,13 @@ main{
     }
     .spotify-multimedia{
         h2{
-            color: $color-white;
-            text-align: center;
-            font-size: 25px;
-            font-weight: bold;
-            margin: 20px 10%;
+            @include texto(center, 25px, 700, $color-yellow);
+            margin: 2rem 10%;
         }
         .spotify{
             display: flex;
             justify-content: center;
+            margin-bottom: 1.5rem;
             .spotify-tres, .spotify-dos{
                 display: none;
             }
@@ -119,13 +112,11 @@ footer{
             justify-content: center;
             align-items: center;
             p{
-                font-size: 15px;
-                font-weight: bold;
-                color: $color-white;
+                @include texto(center, 15px, 400, $color-white);
                 margin: 0 2rem;
             }
             a{
-                font-size: 15px;
+                font-size: 20px;
                 text-decoration: none;
                 color: $color-white;
                 margin: 0.5rem;

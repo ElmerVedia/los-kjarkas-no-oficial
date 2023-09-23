@@ -5,13 +5,10 @@
 //bloque main
 
 main{
-    .titulo-historia{
-        text-align: center;
-        margin: 30px 0;
+    .titulo-paginas{
         h1{
-            color: $color-white;
-            @extend %titulo-principal;
-            text-shadow: $color-titulo-aspecto;
+            @include texto(center, 30px, 900, $color-yellow);
+            @include aspecto-texto;
         }
     }
     .contenedor-historia{
@@ -23,30 +20,21 @@ main{
             justify-content: center;
             flex-direction: column;
             h2{
-                text-align: center;
-                font-size: 25px;
-                margin: 20px 0;
-                font-size: 600;
-                color: $color-yellow;
-                font-weight: 600;
-                text-shadow: 2px 2px 2px rgb(226, 234, 88);
+                @include texto(center, 25px, 700, $color-yellow);
+                margin: 2rem 0;
             }
             p{
-                @extend %texto-mobile;
-                color: $color-white;
+                @include texto(center, 18px, 400, $color-white);
             }
         }
         .historia-secundario{
             h3{
-                font-size: 20;
+                @include texto(left, 25px, 700, $color-white);
                 text-decoration: underline;
-                margin: 10px 0;
-                color: $color-white;
-                font-weight: 500;
+                margin: 1rem 0;
             }
             p{
-                @extend %texto-mobile;
-                color: $color-white;
+                @include texto(left, 18px, 400, $color-white);
             }
         }
     }
@@ -59,20 +47,15 @@ footer{
             justify-content: center;
             align-items: center;
             a{
-                font-size: 15px;
+                font-size: 25px;
                 text-decoration: none;
                 color: $color-white;
-                margin: 0.5rem;
-                &:hover{
-                    transform: scale(1.2);
-                }
+                margin: 1rem;
             }
         }
         p{
-            text-align: center;
+            @include texto(center, 15px, 400, $color-white);
             padding: 2rem;
-            color: $color-white;
-            font-size: 10px;
         }
     }
 }

@@ -1,14 +1,25 @@
 @import "../utilidades/mixin";
-@import "../utilidades/extend";
+@import "../utilidades/variables";
 @import "../utilidades/extend";
 
 // bloque main
 main{
-    .titulo-integrantes{
-        h1{
-            color: $color-white;
-            @extend %titulo-principal;
-            text-shadow: $color-titulo-aspecto;
+    .kjarkas-grupo{
+        .kjarkas-uno{
+            h2{
+                @extend %titulo-principal;
+            }
+            p{
+                @extend %texto-mobile;
+            }
+        }
+        .kjarkas-dos{
+            h2{
+                @extend %titulo-principal;
+            }
+            p{
+                @extend %texto-mobile;
+            }
         }
     }
 }

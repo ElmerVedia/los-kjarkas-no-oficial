@@ -3,25 +3,21 @@
     display: flex;
     align-items: center;
 }
-
-//mixin tablet
-@mixin titulo-tablet{
-    font-size: 35px;
-    font-weight: 800;
+//mixin titulo
+@mixin texto ($text-align, $font-size, $font-weight, $color){
+    text-align: $text-align;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+//mixin relleno texto
+@mixin aspecto-texto{
+    text-shadow: 1px 2px 3px rgb(83, 76, 4);
+    margin: 2rem 5%;
     letter-spacing: 2px;
 }
-@mixin subtitulo-tablet{
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-//mixin desktop
-@mixin titulo-desktop{
-    font-size: 40px;
-    font-weight: 900;
-}
-@mixin subtitulo-desktop{
-    font-size: 30px;
-    font-weight: 800;
+//mixin texto mq
+@mixin texto-mq ($font-size, $font-weight){
+    font-size: $font-size;
+    font-weight: $font-weight;
 }

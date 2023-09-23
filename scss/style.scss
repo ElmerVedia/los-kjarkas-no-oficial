@@ -17,8 +17,10 @@
 @import "html/discografia";
 /* estilos contactos */
 @import "html/contacto";
+//grid
 @import "layout/grid";
-
+/* mq tablet */
+@import "utilidades/mq-tablet";
 /* mq desktop */
 @import "utilidades/mq-desktop";
 

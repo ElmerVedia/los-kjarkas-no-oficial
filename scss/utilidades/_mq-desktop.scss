@@ -15,11 +15,10 @@
         section{
             .titulo{
                 h1{
-                    font-size: 40px;
-                    font-weight: 900;
+                    @include texto-mq(40px, 900);
                 }
                 p{
-                    font-size: 20px;
+                    @include texto-mq(20px, 600);
                     margin: 0 25% 20px 25%;
                 }
             }
@@ -60,7 +59,7 @@
                         padding: 20px;
                         text-align: center;
                         a{
-                            font-weight: 400;
+                            font-weight: 500;
                             text-decoration: none;
                             padding: 10px;
                             color: $color-white;
@@ -80,9 +79,8 @@
         .spotify-multimedia{
             margin: 2rem 0;
             h2{
-                font-size: 30px;
-                padding-bottom: 10px;
-                font-weight: 600;
+                @include texto-mq(35px, 900);
+                margin-top: 1rem;
             }
             .spotify{
                 justify-content: space-around;
@@ -101,7 +99,7 @@
                 height: auto;
             }
             p{
-                font-size: 14px;
+                @include texto-mq(20px, 600);
             }
         }
     }
@@ -112,8 +110,7 @@
     main{
         .titulo-historia{
             h1{
-                font-size: 40px;
-                font-weight: 900;
+                @include texto-mq(40px, 900);
             }
         }
         .contenedor-historia{
@@ -121,80 +118,72 @@
             margin-left: 15%;
             .historia-principal{
                 h2{
-                    font-size: 35px;
-                    font-weight: 800;
+                    @include texto-mq(35px, 900);
                 }
                 p{
-                    font-size: 20px;
+                    @include texto-mq(20px, 600);
                 }
             }
             .historia-secundario{
                 margin: 0 10px;
                 h3{
-                    font-size: 30px;
-                    font-weight: 500;
+                    @include texto-mq(30px, 700);
                 }
                 p{
-                    font-size: 20px;
+                    @include texto-mq(20px, 600);
                     padding: 0 5px;
                 }
             }
         }
     }
-}
-footer{
-    .footer-paginas{
-        padding: 3rem 0;
-        p{
-            font-size: 14px;
-            font-weight: 500;
+    footer{
+        .footer-paginas{
+            padding: 3rem 0;
+            .redes{
+                font-size: 30px;
+                a{
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            p{
+                @include texto-mq(20px, 600);
+            }
         }
     }
 }
 
 
+
 /* mq desktop integrantes */
 @media screen and (min-width:1024px){
     main{
-        .titulo-integrantes{
-            h1{
-                font-size: 35px;
-                font-weight: 800;
-                text-shadow: 2px 2px 2px rgb(76, 75, 75);
-                color: $color-white;
-            }
-        }
         .kjarkas-grupo{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(6, 1fr);
-            margin: 10px 15%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            margin: 2rem 10%;
             .kjarkas-uno{
                 display: flex;
                 flex-direction: column;
                 margin-right: 20px;
                 h2{
-                    font-size: 30px;
-                    font-weight: 600;
-                    color: $color-white;
+                    @include texto(left, 35px, 900, $color-yellow);
                 }
                 p{
-                    font-size: 20px;
-                    color: $color-white;
+                    @include texto(left, 20px, 700, $color-white);
                 }
             }
             .kjarkas-dos{
                 display: flex;
                 flex-direction: column;
-                margin-left: 20px;
+                margin-right: 20px;
                 h2{
-                    font-size: 30px;
-                    font-weight: 600;
-                    color: $color-white;
+                    @include texto-mq(35px, 900);
                 }
                 p{
-                    font-size: 20px;
-                    color: $color-white;
+                    @include texto-mq(20px, 600);
                 }
             }
         }
@@ -206,8 +195,7 @@ footer{
     main{
         .titulo-discografia{
             h1{
-                font-size: 35px;
-                font-weight: 800;
+                @include texto-mq(40px, 900);
             }
         }
         .contenedor-album{
@@ -237,14 +225,12 @@ footer{
                         left: 50%;
                         transform: translate(-50%, -50%);
                         opacity: 0;
-                        color: $color-white;
-                        padding: 10px;
-                        width: 90%;
+                        padding: 0.5rem;
+                        width: 95%;
                         h2{
-                            text-align: center;
-                            color: rgb(218, 3, 3);
-                            font-weight: 800;
-                            font-size: 25px;
+                            @include texto(center, 25px, 900, rgb(193, 5, 5));
+                            letter-spacing: 1px;
+                            background-color: #ffffff00;
                         }
                         ol{
                             display: flex;
@@ -255,6 +241,7 @@ footer{
                             padding-top: 1rem;
                             letter-spacing: 1px;
                             font-weight: 600;
+                            font-size: 18px;
                         }
                     }
                 }   
